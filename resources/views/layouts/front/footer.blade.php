@@ -13,12 +13,11 @@
                                 <div class="footer-widget about-widget">
                                     <div class="footer-logo">
                                         <figure>
-                                            <a href="index-2.html"><img src="{{ asset('assets/front') }}/images/footer-logo.png" alt=""></a>
+                                            <a href=""><img src="{{ asset('assets/front') }}/images/footer-logo.png" alt=""></a>
                                         </figure>
                                     </div>
                                     <div class="widget-content">
-                                        <div class="text">We specialize in high-quality apartment and villa finishing, delivering modern designs with precision and style. Our expert team turns your ideas into reality with creativity and professionalism.
-.</div>
+                                        <div class="text">{{ $getSetting->small_desc }}</div>
                                     </div>
                                 </div>
                             </div>
@@ -57,11 +56,10 @@
                                     <h2 class="widget-title">Useful links</h2>
                                     <div class="widget-content">
                                         <ul class="list">
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="services.html">Services</a></li>
-                                            <li><a href="projects.html">Project</a></li>
-                                            <li><a href="blog-classic.html">News</a></li>
-                                            <li><a href="contact.html">Contact Us</a></li>
+                                            <li><a href="{{ route('frontend.about') }}">About</a></li>
+                                            <li><a href="{{ route('frontend.categories.posts') }}">Services</a></li>
+                                            <li><a href="{{ route('frontend.conact.index') }}">Contact Us</a></li>
+                                            
                                         </ul>
                                     </div>
                                 </div>
@@ -99,16 +97,17 @@
                 <div class="inner-container clearfix">
                     <div class="social-links">
                         <ul class="social-icon-two">
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="{{ $getSetting->facebook }}"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{ $getSetting->twitter }}"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{ $getSetting->email }}"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="{{ $getSetting->insagram }}"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="{{ $getSetting->whatsapp }}"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="{{ $getSetting->youtupe }}"><i class="fa fa-youtupe"></i></a></li>
                         </ul>
                     </div>
                     
                     <div class="copyright-text">
-                       <a href="https://www.templateshub.net" target="_blank">HHAD</a>
+                       <a href="" target="_blank">HHAD</a>
                     </div>
                 </div>
             </div>
