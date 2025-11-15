@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <!-- index26:42-->
@@ -25,15 +25,29 @@
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
     @stack('header')
+<style>
+    @media only screen and (max-width: 767px) {
+    .subCategory
+    {
+                color: rgb(255, 255, 255);
+                padding-left: 20px;
+                
 
+    }
+    }
+</style>
 </head>
 
 <body>
+    <div class="page-wrapper">
+    <!-- Preloader -->
+    <div class="preloader"></div>
+
 @include('layouts.front.header')
 @yield('body')
 @include('layouts.front.footer')
 
-
+</div>
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="fa fa-arrow-circle-o-up"></span></div>
 <script src="{{ asset('assets/front') }}/js/jquery.js"></script> 
@@ -52,4 +66,9 @@
 </body>
 
 <!-- index26:42-->
-</html>
+</html> 
+
+
+
+
+

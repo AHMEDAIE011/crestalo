@@ -116,4 +116,3 @@
     </footer>
     <!-- End Main Footer -->
 
-</div>
