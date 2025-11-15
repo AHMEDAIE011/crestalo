@@ -14,7 +14,7 @@
                     <span class="title">The Interior speak for themselves</span>
                 </div>
                 <ul class="bread-crumb clearfix">
-                    <li><a href="index-2.html">Home</a></li>
+                    <li><a href="{{ route('frontend.index') }}">Home</a></li>
                     <li>About Us</li>
                 </ul>
             </div>
@@ -53,7 +53,7 @@
                                 salling, serviceing and repairing cardan shafts (cardans) for various vehicles,
                                 technological equipment, tractor, special machinery and agricultural machinery of verious
                                 domestic and foreign manufacturers.</div>
-                            <div class="link-box"><a href="about.html" class="theme-btn btn-style-one">About Us</a></div>
+                            <div class="link-box"><a href="{{ route('frontend.about') }}" class="theme-btn btn-style-one">About Us</a></div>
                         </div>
                     </div>
                 </div>

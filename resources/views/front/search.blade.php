@@ -43,11 +43,11 @@
                         <div class="caption-box">
                             <div class="inner">
                                 <h3><a href="{{ route('frontend.post.show' , $post->slug) }}">{{ $post->title }}</a></h3>
-                                <ul class="info">
+                                {{-- <ul class="info">
                                     <li>06 June 2018,</li>
                                     <li><a href="blog-detail-2.html">John Smith</a></li>
                                     <li><a href="blog-detail-2.html">3 Commets</a></li>
-                                </ul>
+                            </ul> --}}
                             </div>
                         </div>
                     </div>

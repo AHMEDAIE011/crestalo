@@ -124,7 +124,7 @@
                                         <h2>Get Solution</h2>
                                         <div class="text">Contact us at the Interior office nearest to you or submit a
                                             business inquiry online.</div>
-                                        <a class="theme-btn btn-style-two" href="contact.html">Contact</a>
+                                        <a class="theme-btn btn-style-two" href="{{ route('frontend.conact.index') }}">Contact</a>
                                     </div>
                                 </div>
                             </div>
