@@ -21,7 +21,7 @@
                         <h2>{{ $header->title }} <br> {{ $header->title2 }}</h2>
                         <div class="text">The buildings speak for themselves</div>
                         <div class="link-box">
-                            <a href="about.html" class="theme-btn btn-style-one">Check Art</a>
+                            <a href="{{ route('frontend.about') }}" class="theme-btn btn-style-one">Check Art</a>
                         </div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@
                                 <h2>Any  Complexity <br>For Any Cat</h2>
                             </div>
                             <div class="text">Our company has many years experience and specializes in manufacturing, salling, serviceing and repairing cardan shafts (cardans) for various vehicles, technological equipment, tractor, special machinery and agricultural machinery of verious domestic and foreign manufacturers.</div>
-                            <div class="link-box"><a href="about.html" class="theme-btn btn-style-one">About Us</a></div>
+                            <div class="link-box"><a href="{{ route('frontend.about') }}" class="theme-btn btn-style-one">About Us</a></div>
                         </div>
                     </div>
                 </div>
@@ -95,13 +95,13 @@
                     <div class="service-block">
                         <div class="inner-box">
                             <div class="image-box">
-                                <figure class="image"><a href="service-detail.html"><img src="{{ asset($category->image) }}" alt=""></a></figure>
+                                <figure class="image"><a href="{{ route('frontend.category.posts', $category->slug) }}"><img src="{{ asset($category->image) }}" alt=""></a></figure>
                             </div>
                             <div class="lower-content">
-                                <h3><a href="service-detail.html">{{ $category->name }}</a></h3>
+                                <h3><a href="{{ route('frontend.category.posts', $category->slug) }}">{{ $category->name }}</a></h3>
                                 <div class="text">{{ $category->desc }}</div>
                                 <div class="link-box">
-                                    <a href="service-detail.html">Lorn More <i class="fa fa-long-arrow-right"></i></a>
+                                    <a href="{{ route('frontend.category.posts', $category->slug) }}">Lorn More <i class="fa fa-long-arrow-right"></i></a>
                                 </div>
                             </div>
                         </div>
