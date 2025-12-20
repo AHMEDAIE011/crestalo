@@ -3,12 +3,15 @@
 namespace App\Http\Controllers\Admin\Category;
 
 use App\Models\Category;
+use App\Models\OneCategory;
+use App\Utils\ImageManger;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\CategoryRequest;
 use Illuminate\Support\Facades\Session;
 
 class CategoryController extends Controller
+
 {
     public function __construct()
     {
@@ -20,15 +23,16 @@ class CategoryController extends Controller
         $sort_by = request()->sort_by ?? 'id';
         $limit_by = request()->limit_by ?? 5;
 
-        $categories = Category::withCount('posts')->when(request()->keyword, function ($query) {
+        $categories = Category::withCount('posts')->with('oneCategory')->when(request()->keyword, function ($query) {
             $query->where('name', 'LIKE', '%' . request()->keyword . '%');
         })->when(!is_null(request()->status), function ($query) {
             $query->where('status', request()->status);
         });
+        $OneCategory = OneCategory::all(); 
 
         $categories = $categories->orderBy($sort_by, $order_by)->paginate($limit_by);
 
-        return view('admin.categories.index', compact('categories'));
+        return view('admin.categories.index', compact('categories','OneCategory'));
     }
 
     /**
@@ -44,7 +48,11 @@ class CategoryController extends Controller
      */
     public function store(CategoryRequest $request)
     {
-         $category = Category::create($request->except('_token'));
+        $request->validated();
+
+         $category = Category::create($request->except('_token','image'));
+                  ImageManger::uploadImages($request , null, $category);
+
          if(!$category){
             Session::flash('error', ' Try again latter!');
             return redirect()->route('admin.categories.index');
@@ -71,8 +79,11 @@ class CategoryController extends Controller
 
     public function update(CategoryRequest $request, string $id)
     {
+        $request->validated();
         $category = Category::findOrFail($id);
-        $category = $category->update($request->except(['_token' , '_method']));
+        $category->update($request->except(['_token' , '_method' , 'image']));
+                ImageManger::uploadImages($request , null, $category);
+
         if(!$category){
             Session::flash('error', ' Try Again Latter!');
             return redirect()->route('admin.categories.index');

@@ -11,7 +11,7 @@
 
             <div class="card-body shadow mb-4 col-10">
                 <a style="margin-left: 90ch" class="btn btn-primary" href="{{ route('admin.posts.index') }}" >Show Posts</a>
-                <h2>Update Post</h2>
+                <h2>Update Project</h2>
 
                 @if (session()->has('errors'))
                     <div class="alert alert-danger">
@@ -23,11 +23,15 @@
                     </div>
                 @endif
 
+
                 <br><br>
 
                 <div class="row">
                     <div class="col-12">
                         
+                        <div class="alert alert-info">
+                            Project Title En
+                        </div>
                         <div class="form-group">
                             <input type="text" value="{{ @old('title', $post->title) }}" name="title"
                                 placeholder="Enter Post Title" class="form-control">
@@ -35,7 +39,12 @@
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
                         </div>
+                        <br>
+                        <div class="alert alert-info">
+                            Project Title Ar
+                        </div>
                         <div class="form-group">
+                            
                             <input type="text" value="{{ @old('title_ar', $post->title_ar) }}" name="title_ar"
                                 placeholder="Enter Post Title" class="form-control">
                             @error('title_ar')
@@ -49,14 +58,23 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
+
+                            <div class="alert alert-info">
+                                Project Information En
+                            </div>
                         <div class="form-group">
-                            <textarea name="small_desc" placeholder="Enter Post Small Description" class="form-control">{{ $post->small_desc }}</textarea>
+                            <textarea name="small_desc" id="small_desc" placeholder="Enter Post Small Description" class="form-control">{{ $post->small_desc }}</textarea>
                             @error('small_desc')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
                         </div>
+                        
+                                <br>
+                            <div class="alert alert-info">
+                                Project Information Ar
+                            </div>
                         <div class="form-group">
-                            <textarea name="small_desc_ar" placeholder="Enter Post Small Description" class="form-control">{{ $post->small_desc_ar }}</textarea>
+                            <textarea name="small_desc_ar" id="small_desc_ar" placeholder="Enter Post Small Description" class="form-control">{{ $post->small_desc_ar }}</textarea>
                             @error('small_desc_ar')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
@@ -69,14 +87,22 @@
 
                 <div class="row">
                     <div class="col-12">
+                        
+                            <div class="alert alert-info">
+                                Project Descripation En
+                            </div>
                         <div class="form-group">
-                            <textarea id="postContent" name="desc" placeholder="Enter Description" class="form-control">{!! $post->desc !!}</textarea>
+                            <textarea id="postContenteEn" name="desc" placeholder="Enter Description" class="form-control">{!! $post->desc !!}</textarea>
                             @error('desc')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
                         </div>
+                        <br>
+                            <div class="alert alert-info">
+                                Project Descripation Ar
+                            </div>
                         <div class="form-group">
-                            <textarea id="postContent" name="desc_ar" placeholder="Enter Description" class="form-control">{!! $post->desc_ar !!}</textarea>
+                            <textarea id="postContentAr" name="desc_ar" placeholder="Enter Description" class="form-control">{!! $post->desc_ar !!}</textarea>
                             @error('desc_ar')
                                 <strong class="text-danger">{{ $message }}</strong>
                             @enderror
@@ -152,7 +178,7 @@
                 </div>
 
                 <br>
-                <button type="submit" class="btn btn-primary">Update Post</button>
+                <button type="submit" class="btn btn-primary">Update Project</button>
             </div>
 
         </form>
@@ -195,8 +221,18 @@
 
             });
 
-            $('#postContent').summernote({
-                height: 300,
+            $('#postContenteEn').summernote({
+                height: 200,
+            });
+            
+            $('#postContentAr').summernote({
+                height: 200,
+            });
+            $('#small_desc').summernote({
+                height: 200,
+            });
+            $('#small_desc_ar').summernote({
+                height: 200,
             });
         });
     </script>

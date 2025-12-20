@@ -19,6 +19,10 @@ class HeaderImageSeeder extends Seeder
             'title'=>'Architecture is a ',
             'title2'=>'Visual Art.',
             'desc'=>'The buildings speak for themselves',
+            
+            'title_ar'=>'Architecture is a ',
+            'title2_ar'=>'Visual Art.',
+            'desc_ar'=>'The buildings speak for themselves',
             'image'=>$image,
         ]);
         }

@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\Admin\Admin\AdminController;
+use App\Http\Controllers\Admin\PagesManage\HeaderController;
+use App\Http\Controllers\Admin\Category\OneCategoryController;
+use App\Http\Controllers\Admin\PagesManage\TeamController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\User\UserController;
@@ -64,10 +67,16 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' =>[ 'auth:admi
     Route::resource('authorizations' ,      AuthorizationController::class);
     Route::resource('users' ,               UserController::class);
     Route::resource('categories' ,          CategoryController::class);
+    Route::resource('oneCategories' ,          OneCategoryController::class);
+    Route::resource('hraderIndex' ,          HeaderController::class);
+    Route::resource('team' ,          TeamController::class);
     Route::resource('posts' ,               PostController::class);
     Route::resource('admins' ,              AdminController::class);
     Route::resource('related-site' , RelatedSiteController::class);
 
+    Route::get('category/status/{id}' ,         [OneCategoryController::class , 'changeStatus'])->name('category.changeStatus');
+    Route::get('hraderIndex/status/{id}' ,         [HeaderController::class , 'changeStatus'])->name('hraderIndex.changeStatus');
+    Route::get('team/status/{id}' ,         [TeamController::class , 'changeStatus'])->name('team.changeStatus');
     Route::get('categories/status/{id}' ,         [CategoryController::class , 'changeStatus'])->name('categories.changeStatus');
     Route::get('posts/status/{id}' ,              [PostController::class , 'changeStatus'])->name('posts.changeStatus');
     Route::get('posts/comment/delete/{id}' ,      [PostController::class , 'deleteComment'])->name('posts.deleteComment');

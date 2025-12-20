@@ -20,7 +20,10 @@
                   <span>Dashboard</span></a>
           </li>
       @endcan
+      
+<!-- Nav Item - Dashboard -->
 
+      
       <!-- Divider -->
       <hr class="sidebar-divider">
 
@@ -80,13 +83,41 @@
            </div>
        </li>
    @endcan
-   @can('categories')
-   <li class="nav-item">
-       <a class="nav-link" href="{{ route('admin.categories.index') }}">
+
+       <!-- Nav Item - Pages Collapse Menu -->
+       @can('headerImages')
+       <li class="nav-item">
+           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePagesd"
+               aria-expanded="true" aria-controls="collapsePagesd">
+               <i class="fas fa-fw fa-users"></i>
+               <span>Pages Management</span>
+           </a>
+           <div id="collapsePagesd" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+               <div class="bg-white py-2 collapse-inner rounded">
+                   <a class="collapse-item" href="{{ route('admin.hraderIndex.index') }}">Header Manage</a>
+                   <a class="collapse-item" href="{{ route('admin.team.index') }}">Team Manage</a>
+                
+               </div>
+           </div>
+       </li>
+   @endcan
+          <!-- Nav Item - Pages Collapse Menu -->
+       @can('categories')
+       <li class="nav-item">
+           <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages2"
+               aria-expanded="true" aria-controls="collapsePages2">
            <i class="fas fa-fw fa-table"></i>
-           <span>Categories</span></a>
-   </li>
-@endcan
+               <span>Categories Management</span>
+           </a>
+           <div id="collapsePages2" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+               <div class="bg-white py-2 collapse-inner rounded">
+                   <a class="collapse-item" href="{{ route('admin.oneCategories.index') }}">Categories</a>
+                   <a class="collapse-item" href="{{ route('admin.categories.index') }}">Sub Categories</a>
+               </div>
+           </div>
+       </li>
+   @endcan
+   
 
       <!-- Nav Item - Pages Collapse Menu -->
       @can('posts')

@@ -1,6 +1,6 @@
 @extends('layouts.dashboard.app')
 @section('title')
-    categories
+   sub categories
 @endsection
 @section('body')
     <!-- Begin Page Content -->
@@ -13,7 +13,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Categories Managment</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Sub Categories Managment</h6>
             </div>
 
             @include('admin.categories.filter.filter')
@@ -26,6 +26,8 @@
                                 <th>#</th>
                                 <th>Name en</th>
                                 <th>Name ar</th>
+                                <th>category name</th>
+                                <th>images</th>
                                 <th>Status</th>
                                 <th>Posts Count</th>
                                 <th>Created At</th>
@@ -37,6 +39,8 @@
                                 <th>#</th>
                                 <th>Name en</th>
                                 <th>Name ar</th>
+                                <th>category name</th>
+                                <th>images</th>
                                 <th>Status</th>
                                 <th>Posts Count</th>
                                 <th>Created At</th>
@@ -49,6 +53,8 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $category->name }}</td>
                                     <td>{{ $category->name_ar }}</td>
+                                    <td>{{ $category->oneCategory->name }}</td>
+                                    <td><img src="{{ asset($category->image )}}" style="width:100px " class="width-20" alt=""></td>
                                     <td>{{ $category->status == 1 ? 'Active' : 'Not Active' }}</td>
                                     <td>{{ $category->posts_count }}</td>
                                     <td>{{ $category->created_at }}</td>

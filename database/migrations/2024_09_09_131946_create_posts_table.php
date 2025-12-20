@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('title_ar');
             $table->string('slug');
             $table->longText('desc');
-            $table->longText('info');
-            $table->longText('info_ar');
             $table->longText('desc_ar');
             $table->boolean('comment_able')->default(1);
             $table->boolean('header_pro')->default(0);

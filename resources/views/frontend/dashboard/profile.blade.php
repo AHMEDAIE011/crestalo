@@ -37,11 +37,35 @@
                         <div class="post-form p-3 border rounded">
                             <!-- Post Title -->
                             <input name="title" type="text" id="postTitle" class="form-control mb-2"
-                                placeholder="Post Title" />
+                                placeholder="Post Title en" />
+ 
+                            <!-- Post Title -->
+                            <input name="title_ar" type="text" id="postTitle" class="form-control mb-2"
+                                placeholder="Post Title ar" />
+                                <br>
+                                <br>
 
                             <!-- Post Content -->
-                            <textarea name="small_desc" class="form-control mb-2" rows="3" placeholder="Enter Small Description"></textarea>
-                            <textarea name="desc" id="postContent" class="form-control mb-2" rows="3" placeholder="What's on your mind?"></textarea>
+                            <div class="alert alert-info">
+                                Project Information en
+                            </div>
+                            <textarea name="small_desc" id="small_desc" class="form-control mb-2" rows="3" placeholder="Enter Small Description en"></textarea>
+                           
+                            <div class="alert alert-info">
+                                Project Information ar
+                            </div>
+                            <textarea name="small_desc_ar" id="small_desc_ar" class="form-control mb-2" rows="3" placeholder="Enter Small Description ar"></textarea>
+                          
+                          
+                            <div class="alert alert-info">
+                                Project Descripation en
+                            </div>
+                              <textarea name="desc" id="postContentAr" class="form-control mb-2" rows="3" placeholder="What's on your mind?  en"></textarea>
+                            
+                            <div class="alert alert-info">
+                                Project Descripation ar
+                            </div>
+                              <textarea name="desc_ar" id="postContent" class="form-control mb-2" rows="3" placeholder="What's on your mind? ar"></textarea>
 
                             <!-- Image Upload -->
                             <input name="images[]" type="file" id="postImage" class="form-control mb-2" accept="image/*"
@@ -190,7 +214,18 @@
             });
 
             $('#postContent').summernote({
-                height: 300,
+                height: 150,
+            });
+            
+            $('#postContentAr').summernote({
+                height: 150,
+            });
+            $('#small_desc').summernote({
+                height: 150,
+            });
+            
+            $('#small_desc_ar').summernote({
+                height: 150,
             });
         });
 

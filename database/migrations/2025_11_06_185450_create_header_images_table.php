@@ -16,7 +16,12 @@ return new class extends Migration
             $table->string('title');
             $table->string('title2');
             $table->string('desc');
-            $table->string('image');
+            
+            $table->string('title_ar');
+            $table->string('title2_ar');
+            $table->string('desc_ar');
+            $table->string('image')->nullable();
+            $table->boolean('status')->default(1);
 
             $table->timestamps();
         });

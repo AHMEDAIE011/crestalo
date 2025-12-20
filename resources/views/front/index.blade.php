@@ -19,7 +19,7 @@
                 <div class="auto-container">
                     <div class="content-box">
                         <h2>{{ $header->title }} <br> {{ $header->title2 }}</h2>
-                        <div class="text">The buildings speak for themselves</div>
+                        <div class="text">{{ $header->desc }}</div>
                         <div class="link-box">
                             <a href="{{ route('frontend.about') }}" class="theme-btn btn-style-one">Check Art</a>
                         </div>
@@ -28,6 +28,7 @@
             </div>
     
 @endforeach
+
         </div>
 
         <div class="bottom-box">

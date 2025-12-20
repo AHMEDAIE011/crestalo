@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('name_ar');
             $table->string('desc');
-            $table->string('image');
+            $table->string('desc_ar')->default('عربي');
+            $table->string('image')->nullable();
 
             $table->string('slug');
             $table->boolean('status')->default(1);

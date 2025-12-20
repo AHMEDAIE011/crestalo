@@ -24,6 +24,7 @@ return new class extends Migration
     {
         Schema::table('posts', function (Blueprint $table) {
             $table->dropColumn(['small_desc']);
+            $table->dropColumn(['small_desc_ar']);
         });
     }
 };

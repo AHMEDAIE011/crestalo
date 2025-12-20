@@ -22,13 +22,16 @@ class PostRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title' => ['required', 'string', 'min:3',  'max:50'],
-            'desc' => ['required', 'min:10'],
+            'title' => ['required', 'string', 'min:3',  'max:100'],
+            'title_ar' => ['required', 'string', 'min:3',  'max:100'],
+            'desc' => ['required', 'min:10', 'max:600'],
+            'desc_ar' => ['required', 'min:10', 'max:600'],
+            'small_desc' => ['required' , 'min:3' , 'max:600'],
+            'small_desc_ar' => ['required' , 'min:3' , 'max:600'],
             'category_id' => ['exists:categories,id'],
             'comment_able' => ['in:on,off,1,0'],
             'images' => ['nullable'],
             'images.*' => ['image', 'mimes:png,jpg'],
-            'small_desc'=>['required' , 'min:3' , 'max:170'],
             'status'=>['nullable' , 'in:1,0'],
         ];
 

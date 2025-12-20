@@ -1,4 +1,10 @@
 <div class="card-body">
+    <div class="form-group">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-category">
+                   Create Sub Category
+                  </button>
+                  <br>
+            </div>
     <form action="{{ route('admin.categories.index') }}" method="get">
       <div class="row">
           <div class="col-2">
@@ -23,7 +29,7 @@
           <div class="col-1">
               <div class="from-group">
                   <select name="limit_by"  class="form-control">
-                      <option selected disabled value="">Limit</option>
+                      <option selected disabled value=""> Limit</option>
                       <option value="10">10</option>
                       <option value="20">20</option>
                       <option value="40">40</option>
@@ -51,11 +57,7 @@
           </div>
 
           <div class="col-2">
-            <div class="form-group">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add-category">
-                   Create Category
-                  </button>
-            </div>
+            
           </div>
       </div>
     </form>

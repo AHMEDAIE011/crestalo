@@ -28,17 +28,46 @@
                         <!-- Example of a Post Item -->
                         <li class="post-item">
                             <input hidden name="post_id" value="{{$post->id}}">
-                            <!-- Editable Title -->
+                            <!-- Editable Title en-->
+                            
+                            
                             <input name="title" type="text" class="form-control mb-2 post-title"
                                 value="{{ $post->title }}" />
-                          <textarea name="small_desc" class="form-control mb-2" rows="3" placeholder="Enter Small Description">{{ $post->small_desc??'' }}</textarea>
+                            <!-- Editable Title ar-->
+                            
+                            
+                            <input name="title_ar" type="text" class="form-control mb-2 post-title"
+                                value="{{ $post->title_ar }}" />
+                            
+                                <br>
+                                <br>
+                            <div class="alert alert-info">
+                                Project Information En
+                            </div>
+                          <textarea id="small_desc" name="small_desc" class="form-control mb-2" rows="3" placeholder="Enter Small Description en">{!!  $post->small_desc ?? '' !!}</textarea>
+                          
+                            <div class="alert alert-info">
+                                Project Information ar
+                            </div>
+                          <textarea id="small_desc_ar" name="small_desc_ar" class="form-control mb-2" rows="3" placeholder="Enter Small Description ar ">{!! $post->small_desc_ar ?? '' !!}</textarea>
 
 
+                            <div class="alert alert-info">
+                                Project Description En
+                            </div>
                             <!-- Editable Content -->
                             <textarea name="desc" id="post-desc" class="form-control mb-2 post-content">
                                 {!! $post->desc !!}
                              </textarea>
 
+
+                            <div class="alert alert-info">
+                                Project Description Ar
+                            </div>
+                            <!-- Editable Content -->
+                            <textarea name="desc_ar" id="desc_ar" class="form-control mb-2 post-content">
+                                {!! $post->desc_ar !!}
+                             </textarea>
 
                             <!-- Image Upload Input for Editing -->
                             <input name="images[]" id="post-images" type="file" class="form-control mt-2 edit-post-image"
@@ -129,5 +158,16 @@
         $('#post-desc').summernote({
             height: 300,
         });
+        
+            $('#small_desc').summernote({
+                height: 150,
+            });
+            
+            $('#small_desc_ar').summernote({
+                height: 150,
+            });
+            $('#desc_ar').summernote({
+                height: 150,
+            });
     </script>
 @endpush

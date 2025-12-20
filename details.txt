@@ -1,0 +1,7 @@
+ssh -p 65002 u559636269@46.202.172.213
+
+Hhad#01553833368
+
+
+
+cd ~/domains/violet-hornet-513061.hostingersite.com/public_html

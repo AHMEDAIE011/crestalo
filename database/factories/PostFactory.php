@@ -29,8 +29,8 @@ class PostFactory extends Factory
             'desc'=>fake()->paragraph(5),
             'desc_ar'=> $faker_ar->realText(200),
             
-            'info'=>fake()->paragraph(3),
-            'info_ar'=> $faker_ar->realText(200),
+            'small_desc'=>fake()->paragraph(3),
+            'small_desc_ar'=> $faker_ar->realText(200),
             
             'status'=>rand(0,1),
             'comment_able'=>rand(0,1),

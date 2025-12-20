@@ -31,8 +31,8 @@ class HomeController extends Controller
         //     $category->posts = $category->posts()->active()->limit(4)->get();
         //     return $category;
         // });
-        $header_images = HeaderImage::get();
-        $team= Team::where('show','=',1)->get();
+        $header_images = HeaderImage::active()->get();
+        $team= Team::active()->where('show','=',1)->get();
 
         return view('front.index', compact(
               'header_images',
@@ -42,7 +42,7 @@ class HomeController extends Controller
 
     public function about()
     {
-        $team= Team::where('show','=',1)->get();
+        $team= Team::active()->where('show','=',1)->get();
 
         return view('front.about' ,compact(
               'team',
@@ -56,7 +56,7 @@ class HomeController extends Controller
     }
         public function team()
     {
-        $team= Team::all();
+        $team= Team::active()->get();
 
         return view('front.team' ,compact(
               'team',

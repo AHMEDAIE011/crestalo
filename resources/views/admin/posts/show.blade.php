@@ -77,20 +77,20 @@
             </div>
             <br>
             <div class="sn-content">
-                <strong>Small Description EN : {{ $post->small_desc }}</strong>
+                <strong>Project Information EN : </strong>{!!   $post->small_desc !!}
             </div>
             <br>
             <div class="sn-content">
-                <strong>Small Description AR: {{ $post->small_desc_ar }}</strong>
+                <strong>Project Information AR: </strong>{!!   $post->small_desc_ar !!}
             </div>
             <br>
             <br>
             <div class="sn-content">
-                {!! $post->desc !!}
+               <strong>Project Descripation AR: </strong> {!! $post->desc !!}
             </div>
             <br>
             <div class="sn-content">
-                {!! $post->desc_ar !!}
+               <strong>Project Descripation AR: </strong> {!! $post->desc_ar !!}
             </div>
 
             <br>

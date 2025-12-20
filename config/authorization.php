@@ -4,6 +4,9 @@ return [
     'permessions'=>[
         'posts'           =>' Managment Posts',
         'categories'      =>' Managment Categories',
+        'oneCategories'      =>' Managment oneCategories',
+        'headerImages'      =>' Managment headerImages',
+        'team'      =>' Managment ourTeam',
         'settings'        =>' Managment Settings',
         'users'           =>' Managment Users',
         'admins'          =>' Managment Admins',

@@ -16,7 +16,7 @@
                 <ul class="bread-crumb clearfix">
                     <li><a href="{{ route('frontend.index') }}">Home</a></li>
                     <li>Our Team</li>
-                </ul>
+                </ul>   
             </div>
         </div>
     </section>

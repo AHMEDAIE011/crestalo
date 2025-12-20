@@ -1,5 +1,5 @@
  <!-- Modal -->
- <form action="{{ route('admin.categories.store') }}" method="post">
+ <form action="{{ route('admin.categories.store') }}" method="post" enctype="multipart/form-data">
     @csrf
     <div class="modal fade" id="add-category" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
@@ -12,17 +12,53 @@
                 </button>
             </div>
             <div class="modal-body">
-               <div class="form-group">
-                <input type="text" name="name" placeholder="Enter Category Name en" class="form-control">
-                <br>
-                <input type="text" name="name_ar" placeholder="Enter Category Name ar" class="form-control">
-                <br>
+                    <div class="form-group">
+                        Enter Category Name en 
+                         <input type="text" name="name" 
+                            placeholder="Enter Category Name en" class="form-control">
+                        <br>
+
+                        Enter Category Name ar 
+                        <input type="text" name="name_ar" 
+                        placeholder="Enter Category Name ar" class="form-control">
+                        <br>
+
+                        Enter Category Describtion en 
+                        <input type="text" name="desc" 
+                        placeholder="Enter Category Describtion en" class="form-control">
+                        <br>
+
+                        Enter Category Describtion ar                         
+                        <input type="text" name="desc_ar" 
+                        placeholder="Enter Category Describtion ar" class="form-control">
+
+
+
+                    <br>
+                        
+                    <div class="form-group">
+                        <label for="profile-image">Sub Category Image:</label>
+                        <input name="image" type="file" id="profile-image" accept="image/*" />
+                    </div>
+                    
+                    <br>
+                       
                 <select name="status" class="form-control">
                     <option disabled selected>Select Status</option>
                     <option value="1">Active</option>
                     <option value="0">Not Active</option>
                 </select>
-               </div>
+                        
+                    <br>
+                        <select name="one_category_id" class="form-control">
+                            <option disabled selected >Select Category</option>
+                            @foreach ($OneCategory as $categor)
+
+                            <option value="{{ $categor->id }}">{{ $categor->name }}</option>
+                            @endforeach
+                           
+                        </select>
+                    </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
