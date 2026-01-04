@@ -13,7 +13,7 @@
                                 <div class="footer-widget about-widget">
                                     <div class="footer-logo">
                                         <figure>
-                                            <a href=""><img src="{{ asset('assets/front') }}/images/footer-logo.png" alt=""></a>
+                                            <a href=""><img src="{{ asset('assets/front') }}/images/logoss3.png" alt=""></a>
                                         </figure>
                                     </div>
                                     <div class="widget-content">
@@ -107,7 +107,7 @@
                     </div>
                     
                     <div class="copyright-text">
-                       <a href="" target="_blank">HHAD</a>
+                       <a href="https://hhad1.com" target="_blank">HHAD</a>
                     </div>
                 </div>
             </div>

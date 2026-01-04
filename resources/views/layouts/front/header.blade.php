@@ -5,7 +5,7 @@
             <div class="header-lower">
                 <div class="main-box clearfix">
                     <div class="logo-box">
-                        <div class="logo"><a href=""><img src="{{ asset('assets/front') }}/images/logo-2.png" alt="" title=""></a></div>
+                        <div class="logo"><a href=""><img src="{{ asset('assets/front') }}/images/logoss3.png" alt="" title=""></a></div>
                     </div>
 
                     <div class="nav-outer clearfix">
