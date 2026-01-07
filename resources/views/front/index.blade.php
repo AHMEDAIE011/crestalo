@@ -1,6 +1,6 @@
 @extends('layouts.front.app')
 @section('title')
-    Home
+ {{ __('home.home')}}
 @endsection
 @section('meta_desc')
     {{ $getSetting->small_desc }}
@@ -10,110 +10,145 @@
 @endpush
 @section('body')
 
+@php
+    $isAr = App::getLocale() === 'ar';
+@endphp
 
-    <!-- Bnner Section -->
-    <section class="banner-section">
-        <div class="banner-carousel owl-carousel owl-theme">
-@foreach ($header_images as $header)
-            <div class="slide-item" style="background-image: url({{ asset($header->image) }});">
-                <div class="auto-container">
-                    <div class="content-box">
-                        <h2>{{ $header->title }} <br> {{ $header->title2 }}</h2>
-                        <div class="text">{{ $header->desc }}</div>
-                        <div class="link-box">
-                            <a href="{{ route('frontend.about') }}" class="theme-btn btn-style-one">Check Art</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    
-@endforeach
+<!-- Banner Section -->
+<section class="banner-section">
+    <div class="banner-carousel owl-carousel owl-theme">
 
-        </div>
-
-        <div class="bottom-box">
-            <div class="auto-container clearfix">
-                <ul class="contact-info">
-                    <li><span>Phone :</span> (+84) 867-557-243</li>
-                    <li><span>EMAIL :</span> <a href="#">Support@yourdomain.com</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <!-- End Bnner Section -->
-
-    <!-- About Section -->
-    <section class="about-section" style="background-image: url({{ asset('assets/front') }}/images/background/1.jpg);">
-        <div class="auto-container">
-            <div class="row no-gutters">
-                <!-- Image Column -->
-                <div class="image-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="title-box wow fadeInLeft" data-wow-delay='1200ms'>
-                            <h2>ABOUT <br> US</h2>
-                        </div>
-                        <div class="image-box">
-                            <figure class="alphabet-img wow fadeInRight"><img src="{{ asset('assets/front') }}/images/resource/alphabet-image.png" alt=""></figure>
-                            <figure class="image wow fadeInRight" data-wow-delay='600ms'><img src="{{ asset('assets/front') }}/images/resource/image-1.jpg" alt=""></figure>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Content Column -->
-                <div class="content-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column wow fadeInLeft">
-                        <div class="content-box">
-                            <div class="title">
-                                <h2>Any  Complexity <br>For Any Cat</h2>
-                            </div>
-                            <div class="text">Our company has many years experience and specializes in manufacturing, salling, serviceing and repairing cardan shafts (cardans) for various vehicles, technological equipment, tractor, special machinery and agricultural machinery of verious domestic and foreign manufacturers.</div>
-                            <div class="link-box"><a href="{{ route('frontend.about') }}" class="theme-btn btn-style-one">About Us</a></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End About Section -->
-
-    <!-- Services Section -->
-    <section class="services-section">
-        <div class="upper-box" style="background-image: url(images/background/2.jpg);">
-            <div class="auto-container">    
-                <div class="sec-title text-center light">
-                    <span class="float-text">Specialization</span>
-                    <h2>Our Specialization</h2>
-                </div>
-            </div>
-        </div>
-
-        <div class="services-box">
+        @foreach ($header_images as $header)
+        <div class="slide-item" style="background-image: url({{ asset($header->image) }});">
             <div class="auto-container">
-                <div class="services-carousel owl-carousel owl-theme">
-                    <!-- Service Block -->
-@foreach ($categories as $category)
+                <div class="content-box">
 
-                    <div class="service-block">
-                        <div class="inner-box">
-                            <div class="image-box">
-                                <figure class="image"><a href="{{ route('frontend.category.posts', $category->slug) }}"><img src="{{ asset($category->image) }}" alt=""></a></figure>
-                            </div>
-                            <div class="lower-content">
-                                <h3><a href="{{ route('frontend.category.posts', $category->slug) }}">{{ $category->name }}</a></h3>
-                                <div class="text">{{ $category->desc }}</div>
-                                <div class="link-box">
-                                    <a href="{{ route('frontend.category.posts', $category->slug) }}">Lorn More <i class="fa fa-long-arrow-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
+                    <h2>
+                        {{ $isAr ? $header->title_ar : $header->title }}
+                        <br>
+                        {{ $isAr ? $header->title2_ar : $header->title2 }}
+                    </h2>
+
+                    <div class="text">
+                        {{ $isAr ? $header->desc_ar : $header->desc }}
                     </div>
-    
-@endforeach
+
+                    <div class="link-box">
+                        <a href="{{ route('frontend.about') }}" class="theme-btn btn-style-one">
+                            {{ __('home.check_art') }}
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
-    </section>
-    <!--End Services Section -->
+        @endforeach
+
+    </div>
+
+    <div class="bottom-box">
+        <div class="auto-container clearfix">
+            <ul class="contact-info">
+                <li><span>{{ __('home.phone') }} :</span> (+84) 867-557-243</li>
+                <li><span>{{ __('home.email') }} :</span> <a href="#">Support@yourdomain.com</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!-- End Banner Section -->
+
+<!-- About Section -->
+<section class="about-section" style="background-image: url({{ asset('assets/front/images/background/1.jpg') }});">
+    <div class="auto-container">
+        <div class="row no-gutters">
+
+            <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="title-box wow fadeInLeft">
+                        <h2>ABOUT <br> US</h2>
+                    </div>
+                    <div class="image-box">
+                        <figure class="alphabet-img"><img src="{{ asset('assets/front/images/resource/alphabet-image.png') }}"></figure>
+                        <figure class="image"><img src="{{ asset('assets/front/images/resource/image-1.jpg') }}"></figure>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="content-box">
+                        <div class="title">
+                            <h2>{!! __('home.about_heading') !!}</h2>
+                        </div>
+                        <div class="text">{{ __('home.about_desc') }}</div>
+                        <div class="link-box">
+                            <a href="{{ route('frontend.about') }}" class="theme-btn btn-style-one">
+                                {{ __('home.about_us') }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End About Section -->
+
+<!-- Services Section -->
+<section class="services-section">
+    <div class="upper-box">
+        <div class="auto-container">
+            <div class="sec-title text-center light">
+                <span class="float-text">Specialization</span>
+                <h2>{{ __('home.our_specialization') }}</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="services-box">
+        <div class="auto-container">
+            <div class="services-carousel owl-carousel owl-theme">
+
+                @foreach ($categories as $category)
+                <div class="service-block">
+                    <div class="inner-box">
+                        <div class="image-box">
+                            <figure class="image">
+                                <a href="{{ route('frontend.category.posts', $category->slug) }}">
+                                    <img src="{{ asset($category->image) }}">
+                                </a>
+                            </figure>
+                        </div>
+
+                        <div class="lower-content">
+                            <h3>
+                                <a href="{{ route('frontend.category.posts',$category->slug)}}">
+                                    {{ $isAr ? $category->name_ar : $category->name }}
+                                </a>
+                            </h3>
+
+                            <div class="text">
+                                {{ $isAr ? $category->desc_ar : $category->desc }}
+                            </div>
+
+                            <div class="link-box">
+                                <a href="{{ route('frontend.category.posts', $category->slug) }}">
+                                    {{ __('home.learn_more') }}
+                                    <i class="fa fa-long-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Services Section -->
+
 
     <!-- Fun Fact Section -->
     <section class="fun-fact-section">
@@ -159,6 +194,7 @@
     </section>
     <!--End Fun Fact Section -->
 
+
     <!-- Project Section -->
     <section class="projects-section">
         <div class="auto-container">
@@ -167,7 +203,7 @@
                 <h2>Our Project</h2>
             </div>
         </div>
-        
+
         <div class="inner-container">
             <div class="projects-carousel owl-carousel owl-theme">
                 @foreach ($posts as $post)
@@ -186,7 +222,7 @@
                     </div>
                 </div>
 
-                    
+
                 @endforeach
             </div>
         </div>
@@ -197,73 +233,109 @@
     <br>
     <br>
     <br>
+
+
     <!-- Testimonial Section -->
-    <section class="testimonial-section">
-        <div class="outer-container clearfix">
-            <!-- Title Column -->
-            <div class="title-column clearfix">
-                <div class="inner-column">
-                    <div class="sec-title">
-                        <span class="float-text">testimonial</span>
-                        <h2>What Client Says</h2>
-                    </div>
-                    <div class="text">Looking at its layout. The point of using very profectly is that it has a more-or-less normal distribution of letters, as opposed</div>
+<section class="testimonial-section">
+    <div class="outer-container clearfix">
+
+        <!-- Title Column -->
+        <div class="title-column clearfix">
+            <div class="inner-column">
+                <div class="sec-title">
+                    <span class="float-text">Testimonial</span>
+                    <h2>{{ __('home.what_clients_say') }}</h2>
                 </div>
-            </div>
 
-            <!-- Testimonial Column -->
-            <div class="testimonial-column clearfix" style="background-image: url({{ asset('assets/front') }}/images/background/4.jpg);">
-                <div class="inner-column">
-                    <div class="testimonial-carousel owl-carousel owl-theme">
-                        <!-- Testimonial Block -->
-                        <div class="testimonial-block">
-                            <div class="inner-box">
-                                <div class="image-box"><img src="{{ asset('assets/front') }}/images/resource/thumb-1.jpg" alt=""></div>
-                                <div class="text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</div>
-                                <div class="info-box">
-                                    <h4 class="name">Jane Smith</h4>
-                                    <span class="designation">CEO, InDesign</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial Block -->
-                        <div class="testimonial-block">
-                            <div class="inner-box">
-                                <div class="image-box"><img src="{{ asset('assets/front') }}/images/resource/thumb-1.jpg" alt=""></div>
-                                <div class="text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</div>
-                                <div class="info-box">
-                                    <h4 class="name">Jane Smith</h4>
-                                    <span class="designation">CEO, InDesign</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial Block -->
-                        <div class="testimonial-block">
-                            <div class="inner-box">
-                                <div class="image-box"><img src="{{ asset('assets/front') }}/images/resource/thumb-1.jpg" alt=""></div>
-                                <div class="text">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm of existence in this spot.</div>
-                                <div class="info-box">
-                                    <h4 class="name">Jane Smith</h4>
-                                    <span class="designation">CEO, InDesign</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="text">
+                    {{ __('home.testimonial_desc') }}
                 </div>
             </div>
         </div>
-    </section>
-    
-    
+
+        <!-- Testimonial Column -->
+        <div class="testimonial-column clearfix"
+             style="background-image: url({{ asset('assets/front/images/background/4.jpg') }});">
+
+            <div class="inner-column">
+                <div class="testimonial-carousel owl-carousel owl-theme">
+
+                    <!-- Testimonial Block -->
+                    <div class="testimonial-block">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <img src="{{ asset('assets/front/images/resource/thumb-1.jpg') }}" alt="">
+                            </div>
+
+                            <div class="text">
+                                {{ __('home.testimonial_text') }}
+                            </div>
+
+                            <div class="info-box">
+                                <h4 class="name">{{ __('home.testimonial_name') }}</h4>
+                                <span class="designation">
+                                    {{ __('home.testimonial_position') }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Block -->
+                    <div class="testimonial-block">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <img src="{{ asset('assets/front/images/resource/thumb-1.jpg') }}" alt="">
+                            </div>
+
+                            <div class="text">
+                                {{ __('home.testimonial_text') }}
+                            </div>
+
+                            <div class="info-box">
+                                <h4 class="name">{{ __('home.testimonial_name') }}</h4>
+                                <span class="designation">
+                                    {{ __('home.testimonial_position') }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial Block -->
+                    <div class="testimonial-block">
+                        <div class="inner-box">
+                            <div class="image-box">
+                                <img src="{{ asset('assets/front/images/resource/thumb-1.jpg') }}" alt="">
+                            </div>
+
+                            <div class="text">
+                                {{ __('home.testimonial_text') }}
+                            </div>
+
+                            <div class="info-box">
+                                <h4 class="name">{{ __('home.testimonial_name') }}</h4>
+                                <span class="designation">
+                                    {{ __('home.testimonial_position') }}
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End Testimonial Section -->
+
+
     <!-- Team Section -->
     @if ($team)
     <section class="team-section">
         <div class="auto-container">
             <div class="sec-title text-center">
                 <span class="title">Our Team</span>
-                <h2>Profect Expert</h2>
+                <h2>{{ __('home.profect_expert') }}</h2>
             </div>
 
             <div class="row clearfix">
@@ -288,7 +360,7 @@
                         <span class="designation">{{ $user->jop }}</span>
                     </div>
                 </div>
-    
+
 @endforeach
             </div>
         </div>
@@ -300,6 +372,7 @@
     @endif
     <!--End Team Section -->
     <!--End Testimonial Section -->
+
 
     {{-- <!-- News Section -->
     <section class="news-section">

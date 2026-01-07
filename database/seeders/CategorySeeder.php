@@ -19,7 +19,7 @@ class CategorySeeder extends Seeder
         $data = ['Kitchen accessories' , 'Dressing Accessories' , 'Drawer Slide' ,'Kitchen accessories_2' , 'Dressing Accessories_2' , 'Drawer Slide_2' , 'Drawer Slide_3' ];
         $images = ['assets/front/images/resource/service-1.jpg','assets/front/images/resource/service-2.jpg','assets/front/images/resource/service-3.jpg',
                     'assets/front/images/resource/service-1.jpg','assets/front/images/resource/service-2.jpg','assets/front/images/resource/service-3.jpg','assets/front/images/resource/service-1.jpg'];
-    
+
         $date = now(); // أفضل من fake()->date()
 
         foreach ($data as $index => $item) {

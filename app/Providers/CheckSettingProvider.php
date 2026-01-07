@@ -24,10 +24,10 @@ class CheckSettingProvider extends ServiceProvider
     {
         $getSetting = Setting::firstOr(function(){
             return Setting::create([
-                'site_name'=>'creastalo',
+                'site_name'=>'Ather',
                 'logo'=>'/test/logo.png',
                 'favicon'=>'default',
-                'email'=>'creastalo@gmail.com',
+                'email'=>'Ather@gmail.com',
                 'facebook'=>'https://www.facebook.com/',
                 'twitter'=>'https://www.twitter.com/',
                 'insagram'=>'https://www.instagram.com/',
@@ -37,6 +37,7 @@ class CheckSettingProvider extends ServiceProvider
                 'street'=>'El Banafseg',
                 'phone'=>'01222333434',
                 'small_desc'=>'23 of PARAGE is equality of condition, blood, or dignity; specifically : equality between persons (as brothers) one of whom holds a part of a fee ',
+                'small_desc_ar'=>'23 من قانون المساواة هو المساواة في الحالة أو النسب أو الكرامة؛ وتحديداً: المساواة بين الأشخاص (كالإخوة) الذين يمتلك أحدهم جزءاً من ملكية.',
             ]);
         });
 

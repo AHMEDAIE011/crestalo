@@ -25,13 +25,13 @@ class PostFactory extends Factory
 
         return [
             'title'=>fake()->sentence(3),
-            'title_ar'=>$faker_ar->realText(30),
+            'title_ar'=>$faker_ar->sentence(3),
             'desc'=>fake()->paragraph(5),
-            'desc_ar'=> $faker_ar->realText(200),
-            
-            'small_desc'=>fake()->paragraph(3),
-            'small_desc_ar'=> $faker_ar->realText(200),
-            
+            'desc_ar'=> $faker_ar->paragraph(5),
+
+            'small_desc'=>fake()->paragraph(5),
+            'small_desc_ar'=> $faker_ar->paragraph(5),
+
             'status'=>rand(0,1),
             'comment_able'=>rand(0,1),
             'header_pro'=>rand(0,1),
@@ -43,3 +43,4 @@ class PostFactory extends Factory
         ];
     }
 }
+

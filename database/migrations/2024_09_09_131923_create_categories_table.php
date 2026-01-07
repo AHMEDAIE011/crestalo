@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('name_ar');
+            $table->string('name_ar')->default('اسم عربي');
             $table->string('desc');
-            $table->string('desc_ar')->default('عربي');
+            $table->string('desc_ar')->default('محتوي عربي');
             $table->string('image')->nullable();
 
             $table->string('slug');

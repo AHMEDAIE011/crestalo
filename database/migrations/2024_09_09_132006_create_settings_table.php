@@ -26,6 +26,7 @@ return new class extends Migration
             $table->string('city');
             $table->string('street');
             $table->text('small_desc');
+            $table->text('small_desc_ar');
             $table->timestamps();
         });
     }

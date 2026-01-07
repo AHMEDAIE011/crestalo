@@ -17,7 +17,7 @@ return new class extends Migration
              $table->string('name');
              $table->string('name_ar');
              $table->string('desc')->nullable();
-             $table->string('desc_ar')->nullable();
+             $table->string('desc_ar')->default('محتوي عربي');
             $table->string('slug');
             $table->boolean('status')->default(1);
             $table->timestamps();
@@ -31,7 +31,7 @@ return new class extends Migration
 
 
 
-    
+
     /**
      * Reverse the migrations.
      */

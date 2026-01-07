@@ -26,7 +26,7 @@ class ViewServiceProvider extends ServiceProvider
     {
         // share related sites
         $relatedSites = RelatedNewsSite::select('name', 'url')->get();
-        $categories = Category::active()->select('id','slug', 'name','name_ar','desc','image')->get();
+        $categories = Category::active()->select('id','slug', 'name','name_ar','desc','desc_ar','image')->get();
         $oneCategory = OneCategory::with(['categories'])->get();
         $posts = Post::active()->active()->with('images')->latest()->take(10)->get();
 
