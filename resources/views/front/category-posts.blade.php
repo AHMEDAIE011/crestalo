@@ -7,18 +7,21 @@
 @endpush
 
 @section('body')
-
+               
+@php
+    $isAr = App::getLocale() === 'ar';
+@endphp
    <!--Page Title-->
     <section class="page-title" style="background-image:url({{ asset('assets/front') }}/images/background/10.jpg);">
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <div class="title-box">
-                    <h1>News & Artical</h1>
-                    <span class="title">{{  $category->desc}}</span>
+                    <h1>{{  __('alll-cate.news_articles') }}</h1>
+                    <span class="title">{{ $isAr ? $category->desc_ar : $category->desc }}</span>
                 </div>
                 <ul class="bread-crumb clearfix">
-                    <li><a href="{{ route('frontend.index') }}">Home</a></li>
-                    <li>{{  $category->name}}</li>
+                    <li><a href="{{ route('frontend.index') }}">{{  __('alll-cate.home') }}</a></li>
+                    <li>{{ $isAr ? $category->name_ar : $category->name }}</li>
                 </ul>
             </div>
         </div>
@@ -42,7 +45,7 @@
                         </div>
                         <div class="caption-box">
                             <div class="inner">
-                                <h3><a href="{{ route('frontend.post.show' , $post->slug) }}">{{ $post->title }}</a></h3>
+                                <h3><a href="{{ route('frontend.post.show' , $post->slug) }}">{{ $isAr ? $post->title_ar : $post->title }}</a></h3>
                                 {{-- <ul class="info">
                                     <li>06 June 2018,</li>
                                     <li><a href="blog-detail-2.html">John Smith</a></li>

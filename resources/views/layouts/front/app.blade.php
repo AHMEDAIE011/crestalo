@@ -25,6 +25,8 @@
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
     @stack('header')
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Ink&display=swap" rel="stylesheet">
+
 <style>
     @media only screen and (max-width: 767px) {
     .subCategory
@@ -35,10 +37,27 @@
 
     }
     }
+
+
+
+
+
+/* Direction */
+.rtl {
+    direction: rtl;
+    text-align: right;
+    
+}
+
+.ltr {
+    direction: ltr;
+    text-align: left;
+}
+
 </style>
 </head>
 
-<body>
+<body class="{{ app()->getLocale() == 'ar' ? 'font-ar rtl' : '' }}">
     <div class="page-wrapper">
     <!-- Preloader -->
     <div class="preloader"></div>
