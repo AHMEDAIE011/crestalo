@@ -10,8 +10,8 @@
         <div class="auto-container">
             <div class="inner-container clearfix">
                 <div class="title-box">
-                    <h1>Faquality Ask Question</h1>
-                    <span class="title">{{ config('app.name') }}</span>
+                    <h1>{{ __('about.faq_title') }}</h1>
+                    <span class="title">{{ __('about.faq_subtitle') }}</span>
                 </div>
                 <ul class="bread-crumb clearfix">
                     <li><a href="{{ route('frontend.index') }}">Home</a></li>
@@ -34,86 +34,31 @@
                         </div>
                     </div>
                 </div>
+<div class="accordion-column col-lg-6 col-md-12 col-sm-12">
+    <div class="inner-column">
+        <div class="sec-title">
+            <span class="float-text">{{ __('about.subtitle') }}</span>
+            <h2>{{ __('about.title') }}</h2>
+        </div>
 
-                <div class="accordion-column col-lg-6 col-md-12 col-sm-12">
-                    <div class="inner-column">
-                        <div class="sec-title">
-                            <span class="float-text">some FAQ’s</span>
-                            <h2>Frequality Asked Questions</h2>
-                        </div>
-                        <ul class="accordion-box">
-                            <!--Block-->
-                            <li class="accordion block">
-                                <div class="acc-btn">Do you do the design and the execution yourselves? <div
-                                        class="icon fa fa-plus-square"></div>
-                                </div>
-                                <div class="acc-content">
-                                    <div class="content">
-                                        <div class="text">We give a Contra for a Period of 5 years and promise to rectify
-                                            any fault arising out of faulty workmanship at our cost. However the guarantee
-                                            does not hold good for mishandling and breakable items.</div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <!--Block-->
-                            <li class="accordion block active-block">
-                                <div class="acc-btn active">Do you give Contra and After sales service? <div
-                                        class="icon fa fa-plus-square"></div>
-                                </div>
-                                <div class="acc-content current">
-                                    <div class="content">
-                                        <div class="text">We give a Contra for a Period of 5 years and promise to rectify
-                                            any fault arising out of faulty workmanship at our cost. However the guarantee
-                                            does not hold good for mishandling and breakable items.</div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <!--Block-->
-                            <li class="accordion block">
-                                <div class="acc-btn">Will you be able to give a quote, if given the floor plan? <div
-                                        class="icon fa fa-plus-square"></div>
-                                </div>
-                                <div class="acc-content">
-                                    <div class="content">
-                                        <div class="text">We give a Contra for a Period of 5 years and promise to rectify
-                                            any fault arising out of faulty workmanship at our cost. However the guarantee
-                                            does not hold good for mishandling and breakable items.</div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <!--Block-->
-                            <li class="accordion block">
-                                <div class="acc-btn">At what stage an interior designing work could be started?<div
-                                        class="icon fa fa-plus-square"></div>
-                                </div>
-                                <div class="acc-content">
-                                    <div class="content">
-                                        <div class="text">We give a Contra for a Period of 5 years and promise to rectify
-                                            any fault arising out of faulty workmanship at our cost. However the guarantee
-                                            does not hold good for mishandling and breakable items.</div>
-                                    </div>
-                                </div>
-                            </li>
-
-                            <!--Block-->
-                            <li class="accordion block">
-                                <div class="acc-btn">Do you charge for giving a Proposal?<div
-                                        class="icon fa fa-plus-square"></div>
-                                </div>
-                                <div class="acc-content">
-                                    <div class="content">
-                                        <div class="text">We give a Contra for a Period of 5 years and promise to rectify
-                                            any fault arising out of faulty workmanship at our cost. However the guarantee
-                                            does not hold good for mishandling and breakable items.</div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
+        <ul class="accordion-box">
+            @for ($i = 1; $i <= 5; $i++)
+                <li class="accordion block {{ $i == 2 ? 'active-block' : '' }}">
+                    <div class="acc-btn {{ $i == 2 ? 'active' : '' }}">
+                        {{ __('about.q'.$i) }}
+                        <div class="icon fa fa-plus-square"></div>
                     </div>
-                </div>
+                    <div class="acc-content {{ $i == 2 ? 'current' : '' }}">
+                        <div class="content">
+                            <div class="text">{{ __('about.a'.$i) }}</div>
+                        </div>
+                    </div>
+                </li>
+            @endfor
+        </ul>
+    </div>
+</div>
+
             </div>
         </div>
     </section>

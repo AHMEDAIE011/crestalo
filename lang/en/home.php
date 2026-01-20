@@ -87,7 +87,13 @@ we’re your partner in creating smarter and more elegant spaces',
   'testimonial_name3' => 'Ahmed Hassan',
 'testimonial_position3' => 'Account',
 
-    /* Team */
+'testimonial_text4' => 'A refined sense of luxury and attention to detail. Every piece feels thoughtfully designed and perfectly crafted.',
+
+'testimonial_name4' => 'Omar Khaled',
+'testimonial_position4' => 'Entrepreneur',
+
+
+/* Team */
     'our_team' => 'Our Team',
     'profect_expert' => 'Professional Experts',
 
