@@ -34,7 +34,7 @@
                     </div>
 
                     <div class="link-box">
-                        <a href="{{ route('frontend.about') }}" class="theme-btn btn-style-one">
+                        <a href="{{ route('frontend.categories.posts') }}" class="theme-btn btn-style-one">
                             {{ __('home.check_art') }}
                         </a>
                     </div>
@@ -49,8 +49,8 @@
     <div class="bottom-box">
         <div class="auto-container clearfix">
             <ul class="contact-info">
-                <li><span>{{ __('home.phone') }} :</span> (+84) 867-557-243</li>
-                <li><span>{{ __('home.email') }} :</span> <a href="#">Support@yourdomain.com</a></li>
+                <li><span>{{ __('home.phone') }} :</span> <a href="{{ $getSetting->whatsapp }}">{{ $getSetting->phone }}</a></li>
+                <li><span>{{ __('home.email') }} :</span> <a href="{{ $getSetting->email }}">{{ $getSetting->email }}</a></li>
             </ul>
         </div>
     </div>
@@ -268,13 +268,13 @@
                             </div>
 
                             <div class="text">
-                                {{ __('home.testimonial_text') }}
+                                {{ __('home.testimonial_text1') }}
                             </div>
 
                             <div class="info-box">
-                                <h4 class="name">{{ __('home.testimonial_name') }}</h4>
+                                <h4 class="name">{{ __('home.testimonial_name1') }}</h4>
                                 <span class="designation">
-                                    {{ __('home.testimonial_position') }}
+                                    {{ __('home.testimonial_position1') }}
                                 </span>
                             </div>
                         </div>
@@ -288,13 +288,13 @@
                             </div>
 
                             <div class="text">
-                                {{ __('home.testimonial_text') }}
+                                {{ __('home.testimonial_text2') }}
                             </div>
 
                             <div class="info-box">
-                                <h4 class="name">{{ __('home.testimonial_name') }}</h4>
+                                <h4 class="name">{{ __('home.testimonial_name2') }}</h4>
                                 <span class="designation">
-                                    {{ __('home.testimonial_position') }}
+                                    {{ __('home.testimonial_position2') }}
                                 </span>
                             </div>
                         </div>
@@ -308,13 +308,13 @@
                             </div>
 
                             <div class="text">
-                                {{ __('home.testimonial_text') }}
+                                {{ __('home.testimonial_text3') }}
                             </div>
 
                             <div class="info-box">
-                                <h4 class="name">{{ __('home.testimonial_name') }}</h4>
+                                <h4 class="name">{{ __('home.testimonial_name3') }}</h4>
                                 <span class="designation">
-                                    {{ __('home.testimonial_position') }}
+                                    {{ __('home.testimonial_position3') }}
                                 </span>
                             </div>
                         </div>

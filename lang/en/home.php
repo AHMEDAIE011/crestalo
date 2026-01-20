@@ -55,9 +55,9 @@ we’re your partner in creating smarter and more elegant spaces',
 
     /* About Section */
     'about_title' => 'ABOUT <br> US',
-    'about_heading' => 'Any Complexity <br> For Any Cat',
-    'about_desc' => 'Our company has many years of experience and specializes in manufacturing, selling, servicing, and repairing cardan shafts for various vehicles, machinery, and equipment.',
-    'about_us' => 'About Us',
+    'about_heading' => 'Ather is an integrated space for design and execution',
+'about_desc' => 'We design and craft furniture pieces that blend authentic craftsmanship with contemporary design, using carefully selected materials and precise execution. Our creations go beyond function — they express taste, tell a story, and give each space its own unique identity.',
+'about_us' => 'About Us',
 
     /* Services */
     'specialization' => 'Specialization',
@@ -77,9 +77,15 @@ we’re your partner in creating smarter and more elegant spaces',
     /* Testimonials */'testimonial' => 'Testimonial',
 'what_clients_say' => 'What Client Says',
 'testimonial_desc' => 'The point of using a professional layout is that it has a more-or-less normal distribution of letters.',
-'testimonial_text' => 'A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.',
-'testimonial_name' => 'Jane Smith',
-'testimonial_position' => 'CEO, InDesign',
+'testimonial_text1' =>  'Outstanding quality and flawless finishing. The final piece exceeded my expectations in every detail.',
+   'testimonial_text2' =>  'Precise craftsmanship and professional execution. They understand design vision from the very first discussion.',
+    'testimonial_text3' =>  'Not just furniture, but real art pieces. Quality is evident in every detail. Highly recommended.',
+   'testimonial_name1' => 'Mohamed Abdelrahman',
+'testimonial_position1' => 'CEO',
+  'testimonial_name2' => 'Sara Ahmed',
+'testimonial_position2' => 'Design',
+  'testimonial_name3' => 'Ahmed Hassan',
+'testimonial_position3' => 'Account',
 
     /* Team */
     'our_team' => 'Our Team',

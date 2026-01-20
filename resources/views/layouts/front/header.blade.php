@@ -12,7 +12,7 @@
                 <div class="logo-box">
                     <div class="logo">
                         <a href="{{ route('frontend.index') }}">
-                            <img src="{{ asset('assets/front/images/logoss3.png') }}" alt="" title="">
+                            <img src="{{ asset($getSetting->logo ) }}" alt="" title="">
                         </a>
                     </div>
                 </div>

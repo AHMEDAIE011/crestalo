@@ -25,19 +25,22 @@ class CheckSettingProvider extends ServiceProvider
         $getSetting = Setting::firstOr(function(){
             return Setting::create([
                 'site_name'=>'Ather',
-                'logo'=>'/test/logo.png',
+                'logo'=>'assets/front/images/logoss3.png',
                 'favicon'=>'default',
                 'email'=>'Ather@gmail.com',
-                'facebook'=>'https://www.facebook.com/',
-                'twitter'=>'https://www.twitter.com/',
-                'insagram'=>'https://www.instagram.com/',
-                'youtupe'=>'https://www.youtupe.com/',
+                'facebook'=>'https://www.facebook.com/athar.furniture1',
+                'twitter'=>'',
+                'insagram'=>'https://www.instagram.com/athar.furniture1/',
+                'youtupe'=>'',
                 'country'=>'Egypt',
-                'city'=>' New Cairo',
-                'street'=>'El Banafseg',
-                'phone'=>'01222333434',
-                'small_desc'=>'23 of PARAGE is equality of condition, blood, or dignity; specifically : equality between persons (as brothers) one of whom holds a part of a fee ',
-                'small_desc_ar'=>'23 من قانون المساواة هو المساواة في الحالة أو النسب أو الكرامة؛ وتحديداً: المساواة بين الأشخاص (كالإخوة) الذين يمتلك أحدهم جزءاً من ملكية.',
+                'city'=>'Nile Corniche – Helwan',
+                'street'=>'Next to Mefko Helwan Furniture',
+                'phone'=>'01002820312',
+                'small_desc'=>'We design and craft furniture pieces that blend authentic craftsmanship with contemporary design, using carefully selected materials and precise execution. Our pieces go beyond function — they express taste, tell a story, and give each space its own unique identity.',
+                'small_desc_ar'=>'
+نصمّم وننفّذ قطع أثاث تجمع بين الحِرفة الأصيلة والتصميم العصري،
+ بخامات مختارة بعناية وتنفيذ متقن، لنخلق قطعًا لا تؤدي وظيفة فقط،
+ بل تعبّر عن ذوق، وتحكي قصة، وتمنح المكان هويته الخاصة',
             ]);
         });
 

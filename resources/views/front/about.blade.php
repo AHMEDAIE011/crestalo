@@ -25,7 +25,7 @@
     <!-- About Section -->
     <section class="about-section" style="background-image: url({{ asset('assets/front') }}/images/background/1.jpg);">
         <div class="auto-container">
-            <div class="row no-gutters">
+             <div class="row no-gutters">
                 <!-- Image Column -->
                 <div class="image-column col-lg-6 col-md-12 col-sm-12">
                     <div class="inner-column">
