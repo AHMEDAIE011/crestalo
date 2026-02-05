@@ -6292,7 +6292,7 @@ header-style-seven .nav-toggler:hover{
 
 .project-detail .project-tabs .tab-btn img{
 	display: block;
-	width: 100%;
+	width: 90%;
 	height: auto;
 }
 
@@ -6307,7 +6307,10 @@ header-style-seven .nav-toggler:hover{
 
 .project-detail .tabs-content .image img{
 	display: block;
-	width: 100%;
+	width: 90%;
+	max-width: 960px;
+	max-height: 960px;
+
 	height: auto;
 }
 

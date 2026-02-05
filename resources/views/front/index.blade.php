@@ -299,7 +299,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Testimonial Block -->
                     <div class="testimonial-block">
                         <div class="inner-box">

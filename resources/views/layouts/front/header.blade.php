@@ -139,6 +139,22 @@
                                     <a href="{{ route('frontend.conact.index') }}">{{ __('home.contact') }}</a>
                                 </li>
 
+                                <!-- About Dropdown -->
+                                <li class="dropdown ">
+                                    <a href="#">{{App::getLocale()}}</a>
+                                    <ul>
+                                        
+                                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                        <li>
+                                    <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                        {{ $properties['native'] }}
+                                    </a>
+                                </li>
+                            @endforeach
+                                        
+                                    </ul>
+                                </li>
+
                                 <!-- Account -->
                                 @auth
                                 <li class="dropdown">
