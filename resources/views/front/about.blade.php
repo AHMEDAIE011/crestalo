@@ -71,7 +71,7 @@ ABOUT US
                             <!--Column-->
                             <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                                 <div class="count-box">
-                                    <div class="count"><span class="count-text" data-speed="5000" data-stop="14">0</span></div>
+                                    <div class="count"><span class="count-text" data-speed="5000" data-stop="3">0</span></div>
                                     <h4 class="counter-title">Years of <br>Experience</h4>
                                 </div>
                             </div>
@@ -79,7 +79,7 @@ ABOUT US
                             <!--Column-->
                             <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
                                 <div class="count-box">
-                                    <div class="count"><span class="count-text" data-speed="5000" data-stop="237">0</span>
+                                    <div class="count"><span class="count-text" data-speed="5000" data-stop="137">0</span>
                                     </div>
                                     <h4 class="counter-title">Project <br>Taken</h4>
                                 </div>

@@ -51,12 +51,12 @@
                                                 {{ __('home.faqs') }}
                                             </a>
                                         </li>
-                                        <li>
+                                        {{-- <li>
                                             <a href="{{ route('frontend.team') }}"
                                                class="{{ request()->routeIs('frontend.team') ? 'current' : '' }}">
                                                 {{ __('home.our_team') }}
                                             </a>
-                                        </li>
+                                        </li> --}}
                                     </ul>
                                 </li>
 
@@ -143,7 +143,7 @@
                                 <li class="dropdown ">
                                     <a href="#">{{App::getLocale()}}</a>
                                     <ul>
-                                        
+
                                         @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
                                         <li>
                                     <a class="dropdown-item" rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
@@ -151,7 +151,7 @@
                                     </a>
                                 </li>
                             @endforeach
-                                        
+
                                     </ul>
                                 </li>
 

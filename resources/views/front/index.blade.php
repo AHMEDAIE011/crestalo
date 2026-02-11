@@ -159,7 +159,7 @@
                         <!--Column-->
                         <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp">
                             <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="14">0</span></div>
+                                <div class="count"><span class="count-text" data-speed="5000" data-stop="3">0</span></div>
                                 <h4 class="counter-title">Years of <br>Experience</h4>
                             </div>
                         </div>
@@ -167,7 +167,7 @@
                         <!--Column-->
                         <div class="counter-column col-lg-3 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="400ms">
                             <div class="count-box">
-                                <div class="count"><span class="count-text" data-speed="5000" data-stop="237">0</span></div>
+                                <div class="count"><span class="count-text" data-speed="5000" data-stop="137">0</span></div>
                                 <h4 class="counter-title">Project <br>Taken</h4>
                             </div>
                         </div>
@@ -264,7 +264,7 @@
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="image-box">
-                                <img src="{{ asset('assets/front/images/resource/thumb-1.jpg') }}" alt="">
+                                <img src="{{ asset('assets/front/images/resource/thumb-9.avif') }}" alt="">
                             </div>
 
                             <div class="text">
@@ -284,7 +284,7 @@
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="image-box">
-                                <img src="{{ asset('assets/front/images/resource/thumb-1.jpg') }}" alt="">
+                                <img src="{{ asset('assets/front/images/resource/thumb-7.avif') }}" alt="">
                             </div>
 
                             <div class="text">
@@ -303,7 +303,7 @@
                     <div class="testimonial-block">
                         <div class="inner-box">
                             <div class="image-box">
-                                <img src="{{ asset('assets/front/images/resource/thumb-1.jpg') }}" alt="">
+                                <img src="{{ asset('assets/front/images/resource/thumb-8.jpg') }}" alt="">
                             </div>
 
                             <div class="text">
@@ -329,7 +329,7 @@
 
 
     <!-- Team Section -->
-    @if ($team)
+    {{-- @if ($team)
     <section class="team-section">
         <div class="auto-container">
             <div class="sec-title text-center">
@@ -365,10 +365,10 @@
         </div>
     </section>
     @else
-        <br>
-        <br>
-        <br>
-    @endif
+    @endif --}}
+    <br>
+    <br>
+    <br>
     <!--End Team Section -->
     <!--End Testimonial Section -->
 

@@ -69,16 +69,16 @@ return [
 'testimonial_text3' => 'دي مش مجرد قطع أثاث، دي شغل فني بجد. الجودة باينة في كل تفصيلة، والخامات مختارة بعناية، وأنصح أي حد يحب الذوق العالي إنه يجرّب.',
 'testimonial_text4' => 'إحساس بالفخامة من غير مبالغة، واهتمام بالتفاصيل يفرّق فعلًا. كل قطعة محسوبة ومتعملتش وخلاص، وده اللي خلاني أكون واثق في الاختيار.',
 
-'testimonial_name1' => 'ياسمين عبد الرحمن',
+'testimonial_name1' => 'محمد عبد الرحمن',
 'testimonial_position1' => 'مدير تنفيذي',
 
-'testimonial_name2' => 'سارة أحمد',
+'testimonial_name2' => 'محمد أحمد',
 'testimonial_position2' => 'مصممة',
 
 'testimonial_name3' => 'أحمد حسن',
 'testimonial_position3' => 'محاسب',
 
-'testimonial_name4' => 'مروة خالد',
+'testimonial_name4' => 'ابراهيم خالد',
 'testimonial_position4' => 'رائد أعمال',
 
     /* Team */

@@ -15,6 +15,7 @@ use App\Http\Requests\HeaderIndexRequest;
 class TeamController extends Controller
 
 {
+    
 
     public function index()
     {

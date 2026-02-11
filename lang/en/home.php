@@ -82,14 +82,14 @@ we’re your partner in creating smarter and more elegant spaces',
     'testimonial_text3' =>  'Not just furniture, but real art pieces. Quality is evident in every detail. Highly recommended.',
    'testimonial_name1' => 'Yasmine Abdelrahman',
 'testimonial_position1' => 'CEO',
-  'testimonial_name2' => 'Sara Ahmed',
+  'testimonial_name2' => 'mohamed Ahmed',
 'testimonial_position2' => 'Design',
   'testimonial_name3' => 'Ahmed Hassan',
 'testimonial_position3' => 'Account',
 
 'testimonial_text4' => 'A refined sense of luxury and attention to detail. Every piece feels thoughtfully designed and perfectly crafted.',
 
-'testimonial_name4' => 'Marwa Khaled',
+'testimonial_name4' => 'Ibrahim Khaled',
 'testimonial_position4' => 'Entrepreneur',
 
 

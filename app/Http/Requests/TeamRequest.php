@@ -22,13 +22,13 @@ class TeamRequest extends FormRequest
     public function rules(): array
     {
         return [
-           'name' => ['required', 'string', 'min:3',  'max:100'],
-            'jop' => ['required', 'string', 'min:3',  'max:100'],
-            'phone' => ['required'],
-           'facebook' => ['required', 'string', 'min:3',  'max:100'],
-            'twitter' => ['required', 'string', 'min:3',  'max:100'],
-            'email' => ['required', 'min:10', 'max:100'],
-            'insagram' => ['required', 'min:10', 'max:100'],
+           'name' => ['nullable', 'string', 'min:3',  'max:100'],
+            'jop' => ['nullable', 'string', 'min:3',  'max:100'],
+            'phone' => ['nullable'],
+           'facebook' => ['nullable', 'string', 'min:3',  'max:100'],
+            'twitter' => ['nullable', 'string', 'min:3',  'max:100'],
+            'email' => ['nullable', 'min:10', 'max:100'],
+            'insagram' => ['nullable', 'min:10', 'max:100'],
             'show'=>['in:0,1'],
             'status'=>['in:0,1'],
             
