@@ -9,6 +9,10 @@
     {{ $post->small_desc }}
 @endsection
 
+@php
+    $isAr = App::getLocale() === 'ar';
+@endphp
+
 
 @section('body')
     <!--Page Title-->
@@ -17,7 +21,8 @@
             <div class="inner-container clearfix">
                 <div class="title-box">
                     <h1>Project Detail</h1>
-                    <span class="title">{{ $post->title }}</span>
+                    
+                    <span class="title">{{ $isAr ? $post->title  : $post->title_ar }}</span>
                 </div>
                 <ul class="bread-crumb clearfix">
                     <li><a href="{{ route('frontend.index') }}">Home</a></li>
@@ -69,54 +74,14 @@
                         <!--Content Column-->
                         <div class="content-column col-lg-8 col-md-12 col-sm-12">
                             <div class="inner-column">
-                                <h2>Project Descripation</h2>
-                                <p>Well we’re movin’ on up to the east side. To a deluxe apartment in the sky. The weather
-                                    started getting rough – the tiny ship was tossed. If not for the courage of the fearless
-                                    crew the Minnow would be lost. the Minnow would be lost. We’re gonna do it. On your mark
-                                    get set and go now. Got a dream and we just know now we’re gonna make our dream come
-                                    true. I have always wanted to have a neighbor just like you. I’ve always wanted to live
-                                    in a neighborhood with you.</p>
-                                <h4>Project Challenge</h4>
-                                <p>It’s time to put on makeup. It’s time to dress up right. It’s time to raise the curtain
-                                    on the Muppet Show tonight. The mate was a mighty sailin’ man the Skipper brave and
-                                    sure.</p>
-                                <ul class="list-style-one">
-                                    <li>Five passengers set sail that day for a three hour</li>
-                                    <li>Till the one day when the lady met this fellow</li>
-                                    <li>Family that’s the way we all became the brady</li>
-                                    <li>Champion the cause of the innocent career</li>
-                                    <li>Now were up in the big leagues getting’ turn</li>
-                                    <li>The powerless in a world of criminals operate</li>
-                                </ul>
-                                <h4>What We Did</h4>
-                                <p>Then along come two they got nothin’ but their jeans. Texas tea. Knight Rider: A shadowy
-                                    flight into the dangerous world of a man who does not exist. The first mate and his
-                                    Skipper too will do their very best to make the tropic island nest.</p>
-                                <h4>RESULT</h4>
-                                <p>That’s just a little bit more than the law will allow. We’re gonna do it. On your mark
-                                    get set and go now. Got a dream and we just know now we’re gonna make our dream come
-                                    true. Makin their way the only way they know how. That’s just a little bit more than the
-                                    law will allow.</p>
+                                {{ $isAr ? $post->desc : $post->desc_ar }}
                             </div>
                         </div>
 
                         <!--Info Column-->
                         <div class="info-column col-lg-4 col-md-12 col-sm-12 ">
                             <div class="inner-column wow fadeInRight">
-                                <h3>Project Information</h3>
-                                <p>These men promptly escaped from a maximum security stockade to the Los Angeles
-                                    underground. Love exciting and new. Come aboard were expecting you. Love life's sweetest
-                                    reward Let it flow it floats back to you. Well the first thing you know ol' Jeds a mil
-                                    lionaire infolk said Jed move away.</p>
-                                <ul class="info-list">
-                                    <li><strong>Client :</strong> Mandola Mogana</li>
-                                    <li><strong>Location :</strong> London Donec eleifend 96502</li>
-                                    <li><strong>Surface Area :</strong> 500,000 m2</li>
-                                    <li><strong>Year Completed :</strong> 2017</li>
-                                    <li><strong>Value :</strong> $550.000</li>
-                                    <li><strong>Architect :</strong> Harri & Gary</li>
-                                </ul>
-
+                                {{ $isAr ? $post->small_desc  : $post->small_desc_ar }}
                                 <!--Help Box-->
                                 <div class="help-box-two">
                                     <div class="inner">
