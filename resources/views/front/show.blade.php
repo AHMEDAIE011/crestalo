@@ -74,14 +74,14 @@
                         <!--Content Column-->
                         <div class="content-column col-lg-8 col-md-12 col-sm-12">
                             <div class="inner-column">
-                                {{ $isAr ? $post->desc : $post->desc_ar }}
+                                {!! $isAr ? $post->desc : $post->desc_ar !!}
                             </div>
                         </div>
 
                         <!--Info Column-->
                         <div class="info-column col-lg-4 col-md-12 col-sm-12 ">
                             <div class="inner-column wow fadeInRight">
-                                {{ $isAr ? $post->small_desc  : $post->small_desc_ar }}
+                                {!! $isAr ? $post->small_desc  : $post->small_desc_ar !!}
                                 <!--Help Box-->
                                 <div class="help-box-two">
                                     <div class="inner">
